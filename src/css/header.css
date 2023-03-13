@@ -1,0 +1,47 @@
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  
+}
+
+.haeder__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color:#dc3d3d;
+    font-style: italic;
+    cursor: default;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items:center;
+}
+
+.nav__input {
+    position: relative;
+    padding: 5px  10px;
+    border:none;
+    outline: none;
+    font-size: 18px;
+
+}
+.nav__input::placeholder{
+    color:#dc3d3d;
+}
+.nav__search {
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    outline: none;
+    border:none;
+    color:#dc3d3d;
+}
+
+

@@ -1,0 +1,49 @@
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin: 0 auto;
+  list-style: none;
+
+}
+
+.pagination__link {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 5px;
+  color: inherit;
+  transition: transform 500ms ease-out;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius:20px;
+}
+
+.pagination__link:hover {
+  background: #dc3d3d;
+  color: aliceblue;
+
+}
+
+.page {
+  position: relative;
+  display: flex;
+  max-width: 200px;
+  justify-content: center;
+  margin: 0 auto;
+  align-items:center;
+
+}
+
+.page__prev {
+  position: absolute;
+  right: 200px;
+  background:none;
+  border:none;
+  cursor: pointer;
+}
+.page__next{
+  border:none;
+  cursor: pointer;
+  background:none;
+}
