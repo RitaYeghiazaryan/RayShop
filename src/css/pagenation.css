@@ -17,8 +17,10 @@
   width: 20px;
   height: 20px;
   border-radius: 20px;
+  background:transparent;
+  cursor: pointer;
 }
-/* .pagination__link:hover, */
+.pagination__link:hover,
 .pagination__link:focus-within {
   background: #dc3d3d;
   color: aliceblue;

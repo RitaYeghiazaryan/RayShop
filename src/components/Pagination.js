@@ -41,15 +41,15 @@ function Pagenation(props) {
       <ul className="pagination">
         {pageNumbers.map((number,id) => (
             <li className="page-item" key={id}>
-              <a
-                href="!#"  target="_self"
+              <button
+        
                 className ="pagination__link" 
                 onClick={()=>{paginate(number)
                 }
               
               }
                 >
-              </a>
+              </button>
             </li>
 
             
