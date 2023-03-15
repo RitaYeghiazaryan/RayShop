@@ -28,9 +28,6 @@ const showNothing = () => {
     </div>
   );
 };
-
-
-
 export default function Header(props) {
   let [cartOpen, setCartOpen] = useState(false);
   return (
