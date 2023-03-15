@@ -4,6 +4,7 @@
     flex-wrap: wrap;
 }
 
+
 .categories__item {
     user-select: none;
     display: inline-block;
@@ -16,7 +17,9 @@
     border: 1px solid transparent;
     transition: all 500ms ease;
 }
-
+.categories__item:first-child{
+    display: none;
+}
 .categories__item:hover{
     border-color: silver;
     transform: scale(1.1);

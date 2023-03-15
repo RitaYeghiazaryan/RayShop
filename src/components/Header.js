@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaShoppingCart,FaSearchengin } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import modal from "../img/modal.jpg";
 import crown from "../img/crown.svg";
 import Order from "./Order";
@@ -9,9 +9,9 @@ const showOrders = (props) => {
   props.orders.forEach(element => amount+=Number(parseFloat(element.price)));
   return (
     <>
-      {props.orders.map((el) => (
-        <Order onDelete={props.onDelete}  key={el.id} item={el}  />
-      ))}
+      {props.orders.map((el,id) => (
+        <Order onDelete={props.onDelete}  key={id} item={el}  />
+        ))}
       <p className="shop__amount">Amount : {
       // new Intl.NumberFormat().format(amount)
       amount
@@ -19,11 +19,12 @@ const showOrders = (props) => {
     </>
   );
 };
+
 const showNothing = () => {
   return (
-    <div className="empty">
+    <div className="modal">
       <i>Your basket is empty</i>
-      <img src={modal} alt="modalImg" className="modalImg" />
+      <img src={modal} alt="modal__img" className="modal__img" />
     </div>
   );
 };
@@ -33,7 +34,7 @@ const showNothing = () => {
 export default function Header(props) {
   let [cartOpen, setCartOpen] = useState(false);
   return (
-    <header >
+    <header key={props.id}>
       <div className="haeder__logo">
         <img src={crown} alt="img-logo" /> Ray Shop
       </div>
@@ -53,11 +54,7 @@ export default function Header(props) {
             {props.orders.length > 0 ? showOrders(props) : showNothing()}
           </div>
         )}
-        {/* <li className="nav__item">
-          <input placeholder="I am looking for..." className="nav__input"/>
-          <FaSearchengin className="nav__search"/>
-        </li> */}
-     
+
       </ul>
     </header>
   );

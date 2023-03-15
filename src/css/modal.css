@@ -1,0 +1,12 @@
+.modal {
+    text-align: center;
+    color: #5ad05f;
+    font-weight: 700;
+}
+
+.modal__img {
+    display: flex;
+    max-width: 200px;
+    margin: 10px auto;
+
+}

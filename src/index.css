@@ -5,6 +5,7 @@
 @import url('./css/pagenation.css');
 @import url('./css/shopItem.css');
 @import url('./css/category.css');
+@import url('./css/modal.css');
 
 * {
     margin: 0;
@@ -18,32 +19,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
-
-
-
-
-
-
-
-
-.modalImg{
-    display: flex;
-    max-width: 200px;
-    margin: 10px auto;
-
-}
-
-
-
-
-
-
-.empty{
-text-align: center;
-color:#5ad05f;
-font-weight:700;
-}
-
 
 
 

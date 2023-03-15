@@ -5,10 +5,10 @@ constructor(props){
     super(props)
     this.state={
         categories:[
-            // {
-            //     key:"all",
-            //     name:"All"
-            // },
+            {
+                key:"all",
+                name:"All"
+            },
             {
                 key:"hats",
                 name:"Hats"

@@ -16,34 +16,20 @@
   display: block;
   width: 20px;
   height: 20px;
-  border-radius:20px;
+  border-radius: 20px;
 }
-
-.pagination__link:hover {
+/* .pagination__link:hover, */
+.pagination__link:focus-within {
   background: #dc3d3d;
   color: aliceblue;
 
 }
 
 .page {
-  position: relative;
   display: flex;
   max-width: 200px;
   justify-content: center;
   margin: 0 auto;
-  align-items:center;
+  align-items: center;
 
-}
-
-.page__prev {
-  position: absolute;
-  right: 200px;
-  background:none;
-  border:none;
-  cursor: pointer;
-}
-.page__next{
-  border:none;
-  cursor: pointer;
-  background:none;
 }

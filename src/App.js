@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+
 import Pagenation from "./components/Pagination";
 import Cotegories from "./components/Categories";
 
@@ -11,6 +11,7 @@ class App extends Component {
       orders: [],
       currentItems:[],
       data: [
+        //hats 9
         { 
           id: 1,
           name: "Brown Brim",
@@ -46,6 +47,7 @@ class App extends Component {
           imageUrl: "https://i.ibb.co/YTjW3vF/green-beanie.png",
           price: 18,
           category:"hats"
+          
         },
         {
           id: 6,
@@ -75,6 +77,7 @@ class App extends Component {
           price: 16,
           category:"hats"
         },
+        // sneakers 7
         {
           id: 10,
           name: "Adidas NMD",
@@ -104,6 +107,7 @@ class App extends Component {
           name: "Nike White AirForce",
           imageUrl: "https://i.ibb.co/1RcFPk0/white-nike-high-tops.png",
           price: 160,
+          category:"sneakers"
         },
         {
           id: 14,
@@ -118,7 +122,6 @@ class App extends Component {
           name: "Nike Brown High Tops",
           imageUrl: "https://i.ibb.co/fMTV342/nike-brown.png",
           price: 160,
-  
           category:"sneakers"
         },
         {
@@ -134,10 +137,10 @@ class App extends Component {
           name: "Timberlands",
           imageUrl: "https://i.ibb.co/Mhh6wBg/timberlands.png",
           price: 200,
-      
           category:"sneakers"
+          
         },
-
+        //jackets 5
         {
           id: 18,
           name: "Black Jean Shearling",
@@ -173,7 +176,7 @@ class App extends Component {
           price: 185,
           category:"jackets"
         },
-
+        //wommens 7
         {
           id: 23,
           name: "Blue Tanktop",
@@ -243,12 +246,15 @@ class App extends Component {
           name: "Black & White Longsleeve",
           imageUrl: "https://i.ibb.co/55z32tw/long-sleeve.png",
           price: 25,
+          category:"mens"
         },
         {
           id: 33,
           name: "Pink T-shirt",
           imageUrl: "https://i.ibb.co/RvwnBL8/pink-shirt.png",
           price: 25,
+          category:"mens"
+
         },
         {
           id: 34,
@@ -268,20 +274,21 @@ class App extends Component {
     };
     this.state.currentItems=this.state.data
     this.addToOrder = this.addToOrder.bind(this);
-    this.deleteOrder = this.addToOrder.bind(this);
+    this.deleteOrder = this.deleteOrder.bind(this);
     this.chooseCategory = this.chooseCategory.bind(this);
   }
 
   render() {
     return (
       <div className="wrapper">
-        <Header orders={this.state.orders} onDelete={this.deleteOrder} />
-        <Cotegories chooseCategory={this.chooseCategory} />
+        <Header  orders={this.state.orders} onDelete={this.deleteOrder} />
+        <Cotegories  chooseCategory={this.chooseCategory} />
         <Pagenation
           data={this.state.currentItems}
           onAdd={this.addToOrder}
         />
-        <Footer />
+        
+        {/* <Footer /> */}
       </div>
     );
   }
@@ -296,8 +303,8 @@ class App extends Component {
   }
   deleteOrder(id) {
     console.log(id);
-    this.setState({ orders: this.state.orders.filter((el) => el.id !== id) });
-    // this.setState({orders:this.state.orders.filter(el=>console.log(el))})
+    this.setState({ orders: this.state.orders.filter(el => el.id !== id) });
+
   }
   addToOrder(item) {
     let isInArray = false;
@@ -308,6 +315,7 @@ class App extends Component {
     });
     if (!isInArray) {
       this.setState({ orders: [...this.state.orders, item] });
+     
     }
   }
 }
