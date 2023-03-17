@@ -1,37 +1,45 @@
 .pagination {
   display: flex;
-  justify-content: space-around;
   gap: 15px;
   margin: 0 auto;
   list-style: none;
+  flex-wrap: wrap;
+  padding: 10px;
 
 }
 
 .pagination__link {
   text-decoration: none;
   border: 1px solid black;
-  padding: 5px;
   color: inherit;
   transition: transform 500ms ease-out;
   display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
   background:transparent;
   cursor: pointer;
+  font-size: 20px;
 }
+
 .pagination__link:hover,
-.pagination__link:focus-within {
+.pagination__link.active {
   background: #dc3d3d;
   color: aliceblue;
+  border:none;
 
+}
+
+.pagenation__active{
+  background: #dc3d3d;
+  color: aliceblue;
 }
 
 .page {
   display: flex;
-  max-width: 200px;
   justify-content: center;
   margin: 0 auto;
   align-items: center;
+
 
 }

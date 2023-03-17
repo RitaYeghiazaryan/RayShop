@@ -129,7 +129,6 @@ class App extends Component {
           name: "Air Jordan Limited",
           imageUrl: "https://i.ibb.co/w4k6Ws9/nike-funky.png",
           price: 190,
-       
           category:"sneakers"
         },
         {

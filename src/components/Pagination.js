@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useMemo } from "react";
 
 import { useState } from "react";
 import ShopItems from "./ShopItems";
@@ -10,15 +10,30 @@ function Pagenation(props) {
   const [loading, setLoading] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(3);
-  useEffect(() => {
+  // useEffect(() => {
+  //   const getShopItems = async () => {
+  //     console.log("qani angam");
+  //     setLoading(true);
+  //     const res = await allGoods;
+  //     setShopItems(res);
+  //     setLoading(false);
+  //   };
+  //   getShopItems();
+  // }, [allGoods]);
+
+
+  useMemo(()=>{
     const getShopItems = async () => {
+      console.log("qani angam");
       setLoading(true);
       const res = await allGoods;
       setShopItems(res);
       setLoading(false);
     };
     getShopItems();
-  }, [allGoods]);
+
+
+  },[setShopItems,allGoods])
 
   const lastItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
@@ -42,13 +57,14 @@ function Pagenation(props) {
         {pageNumbers.map((number,id) => (
             <li className="page-item" key={id}>
               <button
-        
-                className ="pagination__link" 
-                onClick={()=>{paginate(number)
+                className={number===currentPage ? 'pagination__link active' :'pagination__link' } 
+                onClick={(e)=>{e.preventDefault()
+                  paginate(number)
                 }
               
               }
                 >
+                  {number}
               </button>
             </li>
 
