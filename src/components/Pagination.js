@@ -10,18 +10,6 @@ function Pagenation(props) {
   const [loading, setLoading] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(3);
-  // useEffect(() => {
-  //   const getShopItems = async () => {
-  //     console.log("qani angam");
-  //     setLoading(true);
-  //     const res = await allGoods;
-  //     setShopItems(res);
-  //     setLoading(false);
-  //   };
-  //   getShopItems();
-  // }, [allGoods]);
-
-
   useMemo(()=>{
     const getShopItems = async () => {
       console.log("qani angam");

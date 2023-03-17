@@ -28,8 +28,13 @@ const showNothing = () => {
     </div>
   );
 };
+
+
 export default function Header(props) {
   let [cartOpen, setCartOpen] = useState(false);
+  const showCart=()=>{
+    setCartOpen((cartOpen = !cartOpen))
+  }
   return (
     <header key={props.id}>
       <div className="haeder__logo">
@@ -41,13 +46,14 @@ export default function Header(props) {
             {props.orders.length >= 1 ? props.orders.length : " "}
           </div>
           <FaShoppingCart
-            onClick={() => setCartOpen((cartOpen = !cartOpen))}
+            onClick={showCart}
             className={`shop-cart-button ${cartOpen && "active"} `}
           />
         </div>
 
         {cartOpen && (
           <div className="order__cart">
+            <div className="order__close" onClick={showCart}>X</div>
             {props.orders.length > 0 ? showOrders(props) : showNothing()}
           </div>
         )}

@@ -26,6 +26,21 @@
     padding: 10px;
     
 }
+.order__close{
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color:#5ad05f;
+    transform: transform 500s ease-in;
+
+
+}
+.order__close:hover{
+    transform: scale(1.5);
+}
 .order__item{
     display: flex;
     justify-content: center;
